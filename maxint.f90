@@ -1,7 +1,7 @@
 program maxintprog
     implicit none
 
-    character(1), parameter :: newline = achar(1)
+    character(1), parameter :: newline = achar(13)
 
     integer(2) :: short_integer
     integer(4) :: norm_intger
