@@ -1,23 +1,22 @@
 program maxintprog
+    use iso_fortran_env, only: int16, int32, int64
     implicit none
 
-    character(1), parameter :: newline = achar(13)
+    integer(int16), parameter :: int16_integer = 1_int16
+    integer(int32), parameter :: int32_integer = 1_int32
+    integer(int64), parameter :: int64_integer = 1_int64
 
-    integer(2) :: short_integer
-    integer(4) :: norm_intger
-    integer(8) :: long_integer
+    print *, "Max positive int16 Integer", huge(int16_integer)
+    print *, "Max negative int16 Integer", -huge(int16_integer)
 
-    print *, "Max value positive of short Integer", huge(short_integer)
-    print *, "Max value negative of short Integer", -huge(short_integer)
+    print *
 
-    print *, newline
+    print *, "Max positive int32 Integer", huge(int32_integer)
+    print *, "Max negative int32 Integer", -huge(int32_integer)
 
-    print *, "Max value positive of norm Integer", huge(norm_intger)
-    print *, "Max value negative of norm Integer", -huge(norm_intger)
+    print *
 
-    print *, newline
-
-    print *, "Max value positive of long Integer", huge(long_integer)
-    print *, "Max value negative of long Integer", -huge(long_integer)
+    print *, "Max positive int64 Integer", huge(int64_integer)
+    print *, "Max negative int64 Integer", -huge(int64_integer)
 
 end program maxintprog
