@@ -1,14 +1,14 @@
 FC=gfortran
 FFLAGS=-O3 -Wall -Wextra
-#MODULES=maxint.f90
-PROG=maxint.f90
+#MODULES=maxint.f95
+PROG=maxint.f95
 SRC=$(MODULES) $(PROG)
-OBJ=${SRC:.f90=.o}
-BASE=${SRC:.f90=}
+OBJ=${SRC:.f95=.o}
+BASE=${SRC:.f95=}
 
 all: clean maxint
 
-%.o: %.f90
+%.o: %.f95
 	$(FC) $(FFLAGS) -o $@ -c $<
 
 maxint: $(OBJ)
